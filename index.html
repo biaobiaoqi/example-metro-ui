@@ -85,7 +85,7 @@
                             </a>
                           
                             <a href="http://4th-anniversary.love600.me" target="view_window4">
-                                <div class="tile double-vertical quadro ribbed-amber live" data-role="live-tile">
+                                <div class="tile double-vertical quadro ribbed-amber live " data-role="live-tile" data-effect="slideUp">
                                     <div class="tile-content icon">
                                         <i class="icon-play-alt"></i>
                                     </div>
@@ -112,5 +112,12 @@
 
     </body>
 
-    <script>createSnow("", 60);</script>
+    <script type="text/javascript">
+        var myDate=new Date();
+        var tmp = myDate.getMonth();
+        //If time is in winter, make it snow in the page.
+        if (tmp == 11 || tmp == 12  || tmp == 1 || tmp == 2) {
+            createSnow("", 60);
+        }
+    </script>
 </html>
